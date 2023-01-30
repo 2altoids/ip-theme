@@ -1,0 +1,8 @@
+{{ define "main" }}
+	{{ .Content }}
+	<ul>
+		{{ range.Pages }}
+			<li><span>{{ .Params.date.Format .Site.Params.dateFormat }}</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		{{ end }}
+	</ul>
+{{ end }}
