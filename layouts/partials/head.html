@@ -1,9 +1,11 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<!-- Insert tags here for robots, favicon, etc. -->
+<!-- Be mean to robots -->
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
-
+<!-- Add favicon and CSS -->
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 <link rel='stylesheet' type='text/css' href='/style.css'>
+<!-- Make findable RSS feed for GUI browser plugins, etc. -->
+<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/rss.xml" title="{{ .Site.Title }}">
 
 <title>{{- if not .IsHome -}}{{- .Page.Title -}}{{- else -}}{{- .Site.Title -}}{{- end -}}</title>
