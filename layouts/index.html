@@ -1,9 +1,3 @@
 {{ define "main" }}
 	{{ .Content }}
-	<ul>
-		{{ range first 6 (where .Site.RegularPages "Type" "posts") }}
-			<li><span>{{ .Params.date.Format .Site.Params.dateFormat }}</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-		{{ end }}
-	</ul>
-	<a href="/posts" style="font-style: italic">All posts</a>
 {{end}}
